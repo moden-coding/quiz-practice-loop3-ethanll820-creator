@@ -11,5 +11,23 @@
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-    }
+        int passing = 0;
+        int failing = 0;
+
+        while(true){
+            System.out.println("give a score");
+            int score = Integer.valueOf(scanner.nextLine());
+            if(score == -1){
+                break;
+            }else if (score < 0 || score > 100) {
+                System.out.println("Invalid score");
+            }else if (score >= 60) {
+                passing = passing + 1;
+            }else if (score <= 60) {
+                failing = failing +1;
+            }
+
+        } System.out.println("passing: "+ passing + "," + "failing:"+ failing);
+
+    } 
 }
